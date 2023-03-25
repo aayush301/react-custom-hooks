@@ -1,5 +1,6 @@
 // Similar to useEffect, but doesn't call the function on first render.
-import { useEffect, useRef } from 'react'
+// Inverse of useEffectOnce()
+import { useEffect, useRef } from "react";
 
 const useUpdateEffect = (callback, dependencies) => {
   const firstRenderRef = useRef(true);
@@ -11,6 +12,6 @@ const useUpdateEffect = (callback, dependencies) => {
     }
     return callback();
   }, dependencies);
-}
+};
 
-export default useUpdateEffect
+export default useUpdateEffect;

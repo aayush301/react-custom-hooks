@@ -1,13 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
 
-export function useLocalStorage(key, initialValue) {
-  return useStorage(key, initialValue, window.localStorage);
-}
-
-export function useSessionStorage(key, initialValue) {
-  return useStorage(key, initialValue, window.sessionStorage);
-}
-
 const useStorage = (key, defaultValue, storageObject) => {
   const [value, setValue] = useState(() => {
     const jsonVal = storageObject.getItem(key);
@@ -23,4 +15,6 @@ const useStorage = (key, defaultValue, storageObject) => {
 
   const remove = useCallback(() => setValue(undefined), []);
   return [value, setValue, remove];
-}
+};
+
+export default useStorage;
