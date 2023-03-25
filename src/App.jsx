@@ -1,6 +1,7 @@
 import React from "react";
 import UseDocumentTitleDemo from "./examples/UseDocumentTitleDemo";
 import UseElementSizeDemo from "./examples/UseElementSizeDemo";
+import UseIntersectionObserverDemo from "./examples/UseIntersectionObserverDemo";
 import UseIsHoverDemo from "./examples/UseIsHoverDemo";
 import UseIsVisibleXYDemo from "./examples/UseIsVisibleXYDemo";
 import UseLocalStorageDemo from "./examples/UseLocalStorageDemo";
@@ -23,6 +24,7 @@ function App() {
       <UseOnClickOutsideDemo />
       <UseOnlineStatusDemo />
       <UseIsVisibleXYDemo />
+      <UseIntersectionObserverDemo />
     </>
   );
 }

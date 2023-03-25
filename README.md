@@ -15,6 +15,7 @@ Use these react hooks in any react project without having to depend on external 
 - useElementSize
 - useEventListener
 - useFetch
+- useIntersectionObserver
 - useIsHover
 - useIsomorphicLayoutEffect
 - useIsVisibleXY

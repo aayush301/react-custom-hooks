@@ -8,6 +8,7 @@ useEffectOnce
 useElementSize
 useEventListener
 useFetch
+useIntersectionObserver
 useIsHover
 useIsomorphicLayoutEffect
 useIsVisibleXY

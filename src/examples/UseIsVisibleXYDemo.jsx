@@ -4,7 +4,7 @@ import useIsVisibleXY from "../hooks/useIsVisibleXY";
 const UseIsVisibleXYDemo = () => {
   const ref = useRef(null);
   const isVisible = useIsVisibleXY(ref);
-  console.log(isVisible);
+  console.log(isVisible ? "visible" : "not visible");
 
   return (
     <div>
