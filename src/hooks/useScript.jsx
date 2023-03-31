@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 // Credits: https://www.30secondsofcode.org/react/s/use-script
-const useScript = src => {
+const useScript = ({ src, type }) => {
   const [status, setStatus] = useState(src ? "loading" : "idle");
   // status: idle or loading or ready or error
 
@@ -15,6 +15,7 @@ const useScript = src => {
     if (!script) {
       script = document.createElement("script");
       script.src = src;
+      if (type) script.type = type;
       script.async = true;
       script.setAttribute("data-status", "loading");
       document.body.appendChild(script);
@@ -42,7 +43,7 @@ const useScript = src => {
       }
       script.remove();
     };
-  }, [src]);
+  }, [src, type]);
 
   return status;
 };
